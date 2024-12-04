@@ -7,5 +7,5 @@ func hitungHuruf(kalimat string) int {
 }
 
 func main(){
-	fmt.Println("Jumlah huruf: ",hitungHuruf("rafif"))
+	fmt.Println("Jumlah huruf dari kata rafif: ",hitungHuruf("rafif"))
 }
