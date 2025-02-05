@@ -15,9 +15,21 @@ func Kerucut() {
 	fmt.Println(hasil)
 }
 
-func Operator() {
+func OperatorPerbandingan() {
 	value := (((2+6) % 3) *4-2) /3
 	isEqual := value == 2
 
 	fmt.Printf("apakah %d = 2 ? %t \n", value, isEqual) // %t menampilkan nilai bool
+}
+
+func OperatorLogika() {
+	var left, right = false, true
+
+	leftAndRight := left && right
+	leftOrRight := left || right
+	leftReverse := !left
+
+	fmt.Printf("left && right = (%t) \n", leftAndRight)
+	fmt.Printf("left || right = (%t) \n", leftOrRight)
+	fmt.Printf("!left = \t(%t) \n", leftReverse) // /t digunakan untuk merapikan output
 }
