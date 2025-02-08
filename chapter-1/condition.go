@@ -91,6 +91,33 @@ func Fallthrough() {
 	default: {
 		fmt.Println("don't worry")
 		fmt.Println("you can be better")
+		}
 	}
+}
+
+func NestingCondition () {
+	/* ini adalah kondisi bercabang yang dimana seleksi kondisi berada di dalam seleksi kondisi */
+	point := 2 // deklarasi variabel point yaitu berisi nilai 8
+
+	//kita cek apakah point lebih dari 7
+	if point > 7 {
+		switch point { // jika true maka akan lanjut ke switch condition
+		case 10: // disini kita cek apakah point == case
+			fmt.Println("perfect") // jika true maka akan mengeksekusi statement ini
+		default: // jika tidak ada case yang terpenuhi maka akan mengeksekusi statement ini
+			fmt.Println("nice")
+		}
+	// kalau point < 7 maka akan melakukan pengecekan ke kondisi ini
+	} else {
+		if point == 5 { // cek apakah point == 5
+			fmt.Println("not bad")
+		} else if point == 3 { // jika point tidak sama dengan 5 makan akan cek apakah point == 3
+			fmt.Println("u can do it!")
+		} else{ // jika point tidak sama dengan 5 ataupun 3
+			fmt.Println("keep trying!") // sebelum statement ini dieksekusi
+			if point == 0 { // kita cek apakah point == 0, jika tidak maka akan mengeksekusi statement sebelumnya
+				fmt.Println("try harder!") // jika iya maka akan mengeksekusi statement di bawah
+			}
+		}
 	}
 }
