@@ -61,7 +61,6 @@ func LabelInGo() {
 			if i == 3 { //ketika i == 3
 				break outerLoop //maka akan mengehentikan paksa perulangan yang ada di dalam label outerLoop
 			}
-
 			fmt.Println("matriks [", i, "][", j, "]")
 		}
 	}
