@@ -39,5 +39,20 @@ func ThirdTask() {
 }
 
 func FourthTask() {
+	numbers := [...]int{
+		12,-5,34,0,150,7,
+	}
 
+	for i := 0; i < len(numbers); i++{
+		if numbers[i] < 0{
+			fmt.Println("Angka negatif diabaikan")
+			continue
+		}
+		if numbers[i] > 100{
+			fmt.Println("Angka terlalu besar, perulangan dihentikan")
+			break
+		}
+
+		fmt.Printf("Element %d : %d\n", i, numbers[i])
+	}
 }

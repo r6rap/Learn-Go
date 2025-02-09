@@ -97,7 +97,7 @@ func Fallthrough() {
 
 func NestingCondition () {
 	/* ini adalah kondisi bercabang yang dimana seleksi kondisi berada di dalam seleksi kondisi */
-	point := 2 // deklarasi variabel point yaitu berisi nilai 8
+	point := 8 // deklarasi variabel point yaitu berisi nilai 8
 
 	//kita cek apakah point lebih dari 7
 	if point > 7 {
