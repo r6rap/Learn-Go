@@ -59,3 +59,46 @@ func LoopInArray() {
 		fmt.Printf("Element ke %d : %s\n", i, fruits[i])
 	}
 }
+
+func ForRange() {
+	//for range di golang
+	var fruits = [4]string{
+		"Avocado",
+		"Banana",
+		"Mango",
+		"Pawpaw",
+	}
+
+	//i : digunakan untuk menampung index dari fruits
+	//fruit : digunakan untuk menampung value / isi dari fruits
+	for i, fruit := range fruits{
+		fmt.Printf("Element %d : %s\n", i, fruit)
+	}
+}
+
+func ForRange2() {
+	var fruits = [4]string{"avocado", "mango", "banana", "pawpaw"}
+
+	//jika hanya ingin menampilkan valuenya, tampung saja nilai yang tidak ingin digunakan ke underscore (_)
+	for _, fruit := range fruits{
+		fmt.Printf("Nama buah: %s\n", fruit)
+	}
+
+	//sama seperti diatas disini hanya menampilkan index dari array
+	for i, _ := range fruits{
+		fmt.Printf("Index ke %d\n", i)
+	}
+}
+
+func MakeInGo() {
+	//deklarasi sekaligus alokasi kapasitas array menggunakan keyword make
+
+	//parameter pertama diisi dengan element array dengan tipe data string
+	//parameter kedua diisi dengan jumlah elementnya
+	var fruits = make([]string, 2)
+
+	fruits[0] = "Avocado"
+	fruits[1] = "Mango"
+
+	fmt.Println(fruits)
+}

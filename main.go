@@ -8,14 +8,23 @@ import (
 )
 
 func main() {
-	fmt.Println("Hello World")
+	fmt.Println("Hello World!")
 
-	array.Array()
-	array.ArrayTwo()
-	array.ArrayThree()
-	array.ArrayMultidimention()
-	array.LoopInArray()
+	array.Slice()
 }
+
+// func array() {
+// 	fmt.Println("Hello World")
+
+// 	// array.Array()
+// 	// array.ArrayTwo()
+// 	// array.ArrayThree()
+// 	// array.ArrayMultidimention()
+// 	// array.LoopInArray()
+// 	// array.ForRange()
+// 	// array.ForRange2()
+// 	// array.MakeInGo()
+// }
 
 // func chapterOne() {
 // 	chapter1.VarTipeData()
