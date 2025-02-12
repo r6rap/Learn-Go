@@ -11,6 +11,8 @@ func main() {
 	fmt.Println("Hello World!")
 
 	array.Slice()
+	array.ValuTypes()
+	array.ReferenceTypes()
 }
 
 // func array() {
