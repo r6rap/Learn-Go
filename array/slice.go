@@ -36,14 +36,45 @@ func ReferenceTypes() {
 }
 
 func Slice() {
-	/*slice adalah data reference elemen array
-	  slice bisa dibuat atau juga dihasilkan dari manipulasi sebuah array ataupun slice lainnya*/
+	/*Slice adalah data reference elemen array.
+	  Slice bisa dibuat atau juga dihasilkan dari manipulasi sebuah array ataupun slice lainnya.
+	  Jika ada slice baru yang terbentuk dari slice lama, maka data elemen slice baru juga memiliki alamat memori
+	  yang sama dengan slice lama, setiap perubahan yang terjadi di elemen slice baru, akan berdampak juga
+	  ke elemen slice lama yang memiliki referensi yang sama*/
 	var fruits = []string{"avocado", "mango", "banana", "pawpaw"}
 
 	//newFruits adalah variabel slice baru yang tercetak dari slice fruits
 	newFruits := fruits[0:2] //0:2 digunakan untuk mengakses slice dari fruits dimulai dari index ke 0 hingga elemen sebelum index ke 2
-
+	// index awal (inklusif):index terakhir tetapi tidak disertakan(eksklusif)
 	fmt.Println(newFruits)
 	fmt.Println(fruits[0:2])
 	fmt.Println(fruits[1:3])
 }
+
+func SliceTwo() {
+	fruits := []string{"melon", "banana", "avocado", "apple"}
+
+	aFruits := fruits[0:3]
+	bFruits := fruits[1:4]
+
+	aaFruits := aFruits[1:2]
+	bbFruits := bFruits[0:1]
+
+	fmt.Println(fruits)
+	fmt.Println(aFruits)
+	fmt.Println(aaFruits)
+	fmt.Println(bFruits)
+	fmt.Println(bbFruits)
+}
+
+func Pointer() {
+	x := 24
+	p := &x //& digunakan untuk mencatat alamat memori dari x
+
+	fmt.Printf("Alamat x: %d\n", x)
+	fmt.Printf("Alamat p: %d\n", p)
+
+	*p = 40 //* digunakan untuk mengakses atau mengubah alamat memori tersebut
+	fmt.Printf("Nilai x setelah diubah melalui pointer: %d\n", x)
+}
+

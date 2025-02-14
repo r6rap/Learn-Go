@@ -8,11 +8,13 @@ import (
 )
 
 func main() {
-	fmt.Println("Hello World!")
+	fmt.Println("Hello World")
 
-	array.Slice()
-	array.ValuTypes()
-	array.ReferenceTypes()
+	// array.Slice()
+	// array.ValuTypes()
+	// array.ReferenceTypes()
+	// array.Pointer()
+	array.SliceTwo()
 }
 
 // func array() {
