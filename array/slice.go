@@ -28,9 +28,10 @@ func ReferenceTypes() {
 	var slice1 = []string{"Avocado", "Banana", "Mango"}
 
 	slice2 := slice1	 //slice2 salinan reference dari slice1 (hanya alamat yang disalin)
+	fmt.Println("Slice1 :", slice1)
 	slice2[1] = "Pawpaw" //ubah index ke 1 di slice2
 
-	fmt.Println("Slice1 :", slice1)
+	
 	fmt.Println("Slice2 :", slice2)
 	//perubahan dari slice2 mempengaruhi slice1 karena keduanya merujuk ke data yang sama
 }
@@ -60,11 +61,22 @@ func SliceTwo() {
 	aaFruits := aFruits[1:2]
 	bbFruits := bFruits[0:1]
 
-	fmt.Println(fruits)
-	fmt.Println(aFruits)
-	fmt.Println(aaFruits)
-	fmt.Println(bFruits)
-	fmt.Println(bbFruits)
+	fmt.Println("Fruits:",fruits)
+	fmt.Println("aFruits:",aFruits)
+	fmt.Println("aaFruits: ",aaFruits)
+	fmt.Println("bFruits:",bFruits)
+	fmt.Println("bbFruits",bbFruits)
+
+	fmt.Println("=======================")
+	fmt.Println(`buah "banana" diubah menjadi "pineapple"`)
+	fmt.Println()
+	bbFruits[0] = "pinneaple"
+	
+	fmt.Println("Fruits:",fruits)
+	fmt.Println("aFruits:",aFruits)
+	fmt.Println("aaFruits:",aaFruits)
+	fmt.Println("bFruits:",bFruits)
+	fmt.Println("bbFruits",bbFruits)
 }
 
 func Pointer() {

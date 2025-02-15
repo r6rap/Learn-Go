@@ -10,12 +10,20 @@ import (
 func main() {
 	fmt.Println("Hello World")
 
+	array.Len()
+	array.Cap()
+	array.Append()
+}
+
+//func slice() {
+	//fmt.Println("Hello World")
+
 	// array.Slice()
 	// array.ValuTypes()
 	// array.ReferenceTypes()
 	// array.Pointer()
-	array.SliceTwo()
-}
+	// array.SliceTwo()
+//}
 
 // func array() {
 // 	fmt.Println("Hello World")
