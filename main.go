@@ -3,16 +3,16 @@ package main
 import (
 	"fmt"
 	"learn-go/array"
-	// "learn-go/latihan-soal"
+	"learn-go/latihan-soal"
 	// "learn-go/chapter-1"
 )
 
-func main() {
+func task() {
 	fmt.Println("Hello World")
 
 	array.Len()
-	array.Cap()
-	array.Append()
+	// array.Cap()
+	// array.Append()
 }
 
 //func slice() {
@@ -59,9 +59,11 @@ func main() {
 // 	chapter1.LabelInGo()
 // }
 
-// func task() {
+func main() {
 // 	latihansoal.FirstTask()
 // 	latihansoal.SecTask()
 // 	latihansoal.ThirdTask()
 //	latihansoal.FourthTask()
-// }
+	latihansoal.TaskOne()
+	latihansoal.TaskTwoV1()
+}
