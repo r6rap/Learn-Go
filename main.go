@@ -65,5 +65,7 @@ func main() {
 // 	latihansoal.ThirdTask()
 //	latihansoal.FourthTask()
 	latihansoal.TaskOne()
-	latihansoal.TaskTwoV1()
+	latihansoal.TaskTwo()
+	latihansoal.TaskThree()
+	latihansoal.TaskFour()
 }
