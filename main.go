@@ -3,16 +3,17 @@ package main
 import (
 	"fmt"
 	"learn-go/array"
-	"learn-go/latihan-soal"
+	// "learn-go/latihan-soal"
 	// "learn-go/chapter-1"
 )
 
-func task() {
+func main() {
 	fmt.Println("Hello World")
 
 	array.Len()
-	// array.Cap()
-	// array.Append()
+	array.Cap()
+	array.Append()
+	array.Copy()
 }
 
 //func slice() {
@@ -59,13 +60,13 @@ func task() {
 // 	chapter1.LabelInGo()
 // }
 
-func main() {
+//func task() {
 // 	latihansoal.FirstTask()
 // 	latihansoal.SecTask()
 // 	latihansoal.ThirdTask()
 //	latihansoal.FourthTask()
-	latihansoal.TaskOne()
-	latihansoal.TaskTwo()
-	latihansoal.TaskThree()
-	latihansoal.TaskFour()
-}
+	//latihansoal.TaskOne()
+	//latihansoal.TaskTwo()
+	//latihansoal.TaskThree()
+	//latihansoal.TaskFour()
+//}

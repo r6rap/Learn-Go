@@ -36,11 +36,42 @@ func Append() {
 	fruits := []string{"avocado", "apple", "banana", "mango"}
 
 	bFruits := append(fruits, "papaya")
-	cFruits := fruits[0:3]
-	//mango berubah menjadi papaya karena len < cap
+	fmt.Println("Sebelum di append dengan cFruits:",fruits)
+
+	cFruits := fruits[0:3] //avocado, apple, banana
+	/*mango berubah menjadi papaya karena len(cFruits) < cap(fruits)
+		maka papaya akan ditempatkan di kapasitas */
 	cFruits = append(cFruits, "papaya")
 
-	fmt.Println(fruits)
-	fmt.Println(bFruits)
-	fmt.Println(cFruits)
+	fmt.Println("Setelah di append cFruits:", fruits)
+	fmt.Println("bFruits:",bFruits)
+	fmt.Println("cFruits:",cFruits)
+}
+
+func Copy() {
+	/* copy(dst, src) digunakan untuk menyalin element slice
+		parameter pertama dst (destination) : tujuan element slice akan disalin
+		parameter kedua src (source) : sumber slice yang elementnya akan disalin
+		n := copy(dst, src) akan mengembalikan jumlah element yang berhasil disalin
+		function copy() hanya mengcopy element sebenyak len() dari destination / dst */
+
+	src := []string{"watermelon", "pinnaple", "apple", "orange"}
+	dst := make([]string, 3)
+	n := copy(dst, src)
+
+	//orange tidak disalin len(dst) hanya 3 karena function copy() hanya mengcopy element sebanyak len(dst)
+	fmt.Println("dst atau tujuan element slice disalin:",dst)
+	fmt.Println("src atau sumber element yang disalin",src)
+	fmt.Println("element yang berhasil disalin:",n)
+
+	fmt.Println("===========================")
+
+	src2 := []string{"watermelon", "avocado"}
+	//2 element pertama dari dst2 diganti dengan src2 karena src2 hanya berisi 2 element itu
+	dst2 := []string{"potato", "potato", "potato"}
+	n2 := copy(dst2, src2)
+
+	fmt.Println(dst2)
+	fmt.Println(src2)
+	fmt.Println(n2)
 }
