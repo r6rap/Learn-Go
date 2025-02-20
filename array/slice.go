@@ -46,10 +46,14 @@ func Slice() {
 
 	//newFruits adalah variabel slice baru yang tercetak dari slice fruits
 	newFruits := fruits[0:2] //0:2 digunakan untuk mengakses slice dari fruits dimulai dari index ke 0 hingga elemen sebelum index ke 2
+	bFruits := fruits[0:3:3] //parameter terakhir adalah untuk menentukan kapasitas dari slice baru
 	// index awal (inklusif):index terakhir tetapi tidak disertakan(eksklusif)
 	fmt.Println(newFruits)
 	fmt.Println(fruits[0:2])
 	fmt.Println(fruits[1:3])
+	fmt.Println("bFruits:", bFruits)
+	fmt.Println("Lenght:", len(bFruits))
+	fmt.Println("Capacity:", cap(bFruits))
 }
 
 func SliceTwo() {

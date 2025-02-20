@@ -1,20 +1,20 @@
 package main
 
 import (
-	"fmt"
-	"learn-go/array"
-	// "learn-go/latihan-soal"
+	//"fmt"
+	//"learn-go/array"
+	 "learn-go/latihan-soal"
 	// "learn-go/chapter-1"
 )
 
-func main() {
-	fmt.Println("Hello World")
+// func task() {
+// 	fmt.Println("Hello World")
 
-	array.Len()
-	array.Cap()
-	array.Append()
-	array.Copy()
-}
+// 	array.Len()
+// 	array.Cap()
+// 	array.Append()
+// 	array.Copy()
+// }
 
 //func slice() {
 	//fmt.Println("Hello World")
@@ -60,7 +60,7 @@ func main() {
 // 	chapter1.LabelInGo()
 // }
 
-//func task() {
+func main() {
 // 	latihansoal.FirstTask()
 // 	latihansoal.SecTask()
 // 	latihansoal.ThirdTask()
@@ -69,4 +69,6 @@ func main() {
 	//latihansoal.TaskTwo()
 	//latihansoal.TaskThree()
 	//latihansoal.TaskFour()
-//}
+	latihansoal.CopyTask1()
+	latihansoal.CopyTask2()
+}
