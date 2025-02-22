@@ -71,4 +71,6 @@ func main() {
 	//latihansoal.TaskFour()
 	latihansoal.CopyTask1()
 	latihansoal.CopyTask2()
+	latihansoal.CopyTask3()
+	latihansoal.CopyTask4()
 }
