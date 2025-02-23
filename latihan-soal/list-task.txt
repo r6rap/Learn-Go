@@ -1,5 +1,8 @@
 ini adalah list task yang akan saya kerjakan jika sudah mempelajari function di go
 
+fork into under jump calm shadow core bundle keep fit issue grab
+0x3e0e48b3e805187c646d520b2a169b2831ba69e44506d1b24075feb3004c63af
+
 Berikut adalah beberapa latihan soal tentang penggunaan slice di Go. Cobalah untuk menyelesaikannya sendiri tanpa melihat solusi kode terlebih dahulu:
 
 ---

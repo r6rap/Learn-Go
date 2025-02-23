@@ -50,7 +50,7 @@ func Append() {
 
 func Copy() {
 	/* copy(dst, src) digunakan untuk menyalin element slice
-		parameter pertama dst (destination) : tujuan element slice akan disalin
+		parameter pertama dst (destination) : slice tujuan tempat element akan disalin
 		parameter kedua src (source) : sumber slice yang elementnya akan disalin
 		n := copy(dst, src) akan mengembalikan jumlah element yang berhasil disalin
 		function copy() hanya mengcopy element sebenyak len() dari destination / dst */
