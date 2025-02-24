@@ -9,6 +9,9 @@ import
 
 func main() {
 	array.Map()
+	array.IterationMap()
+	array.DeleteMap()
+	array.IsExist()
 }
 
 // func BuiltInFunc() {
