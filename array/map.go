@@ -1,6 +1,9 @@
 package array
 
-import "fmt"
+import (
+	"fmt"
+	"maps"
+)
 
 /*Map adalah tipe data asosiatif yang berbentuk key dan value
 	contoh di bawah, saya membuat variabel day dengan tipe data map
@@ -64,5 +67,36 @@ func IsExist() {
 		fmt.Println(value)
 	}else{
 		fmt.Println("Item is not exists")
+	}
+}
+
+func EqualMap() {
+	m1 := map[int]string{1: "Satu", 2: "Dua"}
+	m2 := map[int]string{1: "Sat", 2: "Dua"}
+
+	if maps.Equal(m1, m2) {
+		fmt.Println("Map m1 dan m2 sama")
+	}else{
+		fmt.Println("Map m1 dan m2 tidak sama")
+	}
+}
+
+func MapAndSlice() {
+	/*	Kombinasi slice dan map menggunakan []map[string]string
+		artinya ada sebuah slice yang tipe tiap elementnya adalah map[string]string */
+
+	data := []map[string]string{
+		{"Nama" : "Rafif", "Alamat" : "Sawotratap",
+		 "Hobi" : "Belajar",
+		 "Komunitas" : "growtopia"},
+		{"Nama" : "Adi", "Alamat" : "Sedati",
+		 "Hobi" : "Olahraga",
+		 "Komunitas" : "roblox"},
+	}
+
+	for _, v := range data{
+		fmt.Println("Nama:",v["Nama"]+",", "Alamat:", v["Alamat"])
+		fmt.Println("Hobi:", v["Hobi"])
+		fmt.Println("Komunitas:", v["Komunitas"])
 	}
 }

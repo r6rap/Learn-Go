@@ -1,18 +1,25 @@
 package main
 
-import
-
-//"fmt"
-"learn-go/array"
-//  "learn-go/latihan-soal"
-// "learn-go/chapter-1"
+import(
+	"learn-go/function"
+	//"fmt"
+	//	"learn-go/array"
+	//  "learn-go/latihan-soal"
+	// "learn-go/chapter-1"
+)
 
 func main() {
-	array.Map()
-	array.IterationMap()
-	array.DeleteMap()
-	array.IsExist()
+	
 }
+
+// func Map() {
+// 	array.Map()
+// 	array.IterationMap()
+// 	array.DeleteMap()
+// 	array.IsExist()
+// 	array.EqualMap()
+// 	array.MapAndSlice()
+// }
 
 // func BuiltInFunc() {
 // 	fmt.Println("Hello World")
