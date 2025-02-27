@@ -9,7 +9,9 @@ import(
 )
 
 func main() {
-	
+	names := []string{"Rapip", "Rizal"}
+
+	function.PrintMessage("Hello", names)
 }
 
 // func Map() {
