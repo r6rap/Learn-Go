@@ -54,3 +54,13 @@ func CopyTask4() {
 
 	fmt.Println(nums)
 }
+
+func CopyTask4V2() {
+	nums := []int{10, 20, 40, 50}
+	i := 2
+	value := 99
+
+	nums = append(nums[:i], append([]int{value}, nums[i:]...)...)
+
+	fmt.Println(nums)
+}

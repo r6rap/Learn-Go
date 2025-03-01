@@ -12,6 +12,8 @@ func main() {
 	names := []string{"Rapip", "Rizal"}
 
 	function.PrintMessage("Hello", names)
+	function.MathRandom()
+	function.Divide()
 }
 
 // func Map() {
