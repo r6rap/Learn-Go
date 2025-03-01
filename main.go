@@ -14,6 +14,8 @@ func main() {
 	function.PrintMessage("Hello", names)
 	function.MathRandom()
 	function.Divide()
+	function.Circle()
+	function.Circle2()
 }
 
 // func Map() {
