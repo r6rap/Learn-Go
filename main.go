@@ -16,6 +16,9 @@ func main() {
 	function.Divide()
 	function.Circle()
 	function.Circle2()
+	function.Avg()
+	function.Avg2()
+	function.Info()
 }
 
 // func Map() {

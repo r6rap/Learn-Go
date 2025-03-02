@@ -12,7 +12,9 @@ import (
 	1. Void function: function yang tidak mengembalikan nilai apapun
 	2. Return function: function yang mengembalikan nilai
 	3. Function multiple return: function yang memiliki banyak nilai balik/return
-	4. predefined return value function: function yang nilai baliknya sudah didefinisikan */
+	4. Predefined return value function: function yang nilai baliknya sudah didefinisikan
+	5. Variadic function: function yang bisa menerima banyak parameter seperti slice
+	6. Closure function:  */
 
 func PrintMessage(message string, arr []string) { //void function
 	// strings.Join() digunakan untuk menggabungkan element slice menjadi satu string tunggal dengan pembatas spasi
@@ -87,4 +89,46 @@ func Circle2() {
 
 	fmt.Printf("Luas lingkaran: %.2f \n", luas)
 	fmt.Printf("Keliling lingkaran: %.2f \n", keliling)
+}
+
+func average(num... int) float64 { //variadic function
+	total := 0
+
+	for _, numbers := range num{ //pengaksesannya bisa menggunakan for range
+		total += numbers
+	}
+
+	avg := float64(total) / float64(len(num)) //convert ke float menyesuaikan return type
+
+	return avg
+}
+
+func Avg() {
+	data := average(80, 60, 40, 60, 50, 55, 90, 55, 68)
+	/*Sprintf sama seperti Printf hanya saja fungsi ini tidak menampilkan nilai, melainkan mengembalikan nilainya
+	dalam bentuk string */
+	msg := fmt.Sprintf("Rata rata: %.2f", data)
+
+	fmt.Println(msg)
+}
+
+func Avg2() {
+	data := []int{2, 4, 3, 5, 4, 3, 3, 5, 5, 3}
+	hasil := average(data...) //slice bisa digunakan untuk argumen variadic function
+
+	fmt.Printf("Rata rata: %.2f\n", hasil)
+}
+
+func hobbies(name string, hobbie...string) {
+	hobi := strings.Join(hobbie, ", ")
+
+	fmt.Println("Nama:", name)
+	fmt.Println("Hobi:", hobi)
+}
+
+func Info() {
+	nama := "Rafif Rizal"
+	hobi := []string{"Belajar", "Lari", "Bersepeda"}
+
+	hobbies(nama, hobi...)
 }
