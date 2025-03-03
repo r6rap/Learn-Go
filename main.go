@@ -5,7 +5,7 @@ import(
 	//"fmt"
 	//	"learn-go/array"
 	//  "learn-go/latihan-soal"
-	// "learn-go/chapter-1"
+	//  "learn-go/chapter-1"
 )
 
 func main() {
@@ -14,11 +14,13 @@ func main() {
 	function.PrintMessage("Hello", names)
 	function.MathRandom()
 	function.Divide()
-	function.Circle()
+	function.Lingkaran()
 	function.Circle2()
+	function.DataDiri()
 	function.Avg()
-	function.Avg2()
-	function.Info()
+	function.Sum()
+	function.Hi()
+	function.FilteredName()
 }
 
 // func Map() {
