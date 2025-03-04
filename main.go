@@ -21,6 +21,7 @@ func main() {
 	function.Sum()
 	function.Hi()
 	function.FilteredName()
+	function.Register()
 }
 
 // func Map() {
