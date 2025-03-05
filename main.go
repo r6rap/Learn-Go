@@ -2,7 +2,7 @@ package main
 
 import(
 	"learn-go/function"
-	//"fmt"
+	"fmt"
 	//	"learn-go/array"
 	//  "learn-go/latihan-soal"
 	//  "learn-go/chapter-1"
@@ -22,6 +22,11 @@ func main() {
 	function.Hi()
 	function.FilteredName()
 	function.Register()
+	function.FaktorialLoop(5)
+	fmt.Println(function.FaktorialRecursive(5))
+	fmt.Println(function.Fib(6))
+	function.GetMinMax()
+	function.Closure()
 }
 
 // func Map() {
