@@ -27,6 +27,7 @@ func main() {
 	fmt.Println(function.Fib(6))
 	function.GetMinMax()
 	function.Closure()
+	function.IIFE()
 }
 
 // func Map() {

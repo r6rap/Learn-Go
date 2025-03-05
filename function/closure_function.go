@@ -40,5 +40,5 @@ func GetMinMax() {
 
 	numbers := []int{2, 3, 4, 3, 4, 2, 3}
 	min, max = minMax(numbers...) //insialisasi min, max dengan return dari closure minMax()
-	fmt.Printf("data: %v\n min: %v\n max: %v\n", numbers, min, max)
+	fmt.Printf("data: %v\n min: %v\n max: %v\n", numbers, min, max) //%v digunakan untuk menampilkan data tanpa melihat tipe datanya
 }
