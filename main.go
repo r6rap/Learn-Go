@@ -28,6 +28,9 @@ func main() {
 	function.GetMinMax()
 	function.Closure()
 	function.IIFE()
+	function.RunApp()
+	function.Err(true)
+	function.Recover2()
 }
 
 // func Map() {
