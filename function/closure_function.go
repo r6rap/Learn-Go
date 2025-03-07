@@ -42,3 +42,23 @@ func GetMinMax() {
 	min, max = minMax(numbers...) //insialisasi min, max dengan return dari closure minMax()
 	fmt.Printf("data: %v\n min: %v\n max: %v\n", numbers, min, max) //%v digunakan untuk menampilkan data tanpa melihat tipe datanya
 }
+
+/*	Closure sebagai return, closure bisa dijadikan sebagai nilai kembalian atau return */
+
+func newSequenceGenerator(start, step int) func() int {
+	hasil := start - step
+
+	//karna returnnya adalah closure function
+	return func() int{
+		hasil += step
+		return hasil
+	}
+}
+
+func New() {
+	//maka hasil juga termasuk function sebagai value
+	hasil := newSequenceGenerator(5, 3)
+	fmt.Printf("hasil %d\n", hasil())
+	fmt.Printf("hasil %d\n", hasil())
+	fmt.Printf("hasil %d\n", hasil())
+}

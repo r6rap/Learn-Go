@@ -31,6 +31,8 @@ func main() {
 	function.RunApp()
 	function.Err(true)
 	function.Recover2()
+	function.New()
+	function.Min()
 }
 
 // func Map() {
