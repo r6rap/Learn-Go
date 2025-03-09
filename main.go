@@ -1,39 +1,53 @@
 package main
 
 import(
-	"learn-go/function"
-	"fmt"
+	"learn-go/struct"
+	//"learn-go/pointer"
+	// "learn-go/function"
+	//"fmt"
 	//	"learn-go/array"
 	//  "learn-go/latihan-soal"
 	//  "learn-go/chapter-1"
 )
 
 func main() {
-	names := []string{"Rapip", "Rizal"}
-
-	function.PrintMessage("Hello", names)
-	function.MathRandom()
-	function.Divide()
-	function.Lingkaran()
-	function.Circle2()
-	function.DataDiri()
-	function.Avg()
-	function.Sum()
-	function.Hi()
-	function.FilteredName()
-	function.Register()
-	function.FaktorialLoop(5)
-	fmt.Println(function.FaktorialRecursive(5))
-	fmt.Println(function.Fib(6))
-	function.GetMinMax()
-	function.Closure()
-	function.IIFE()
-	function.RunApp()
-	function.Err(true)
-	function.Recover2()
-	function.New()
-	function.Min()
+	structs.Struct()
+	structs.StructPointer()
+	structs.Embedded()
+	structs.AnonymousStruct()
 }
+
+// func pointer() {
+// 	pointer.Pointer()
+// 	pointer.PointerAsParameter()
+// }
+
+// func function() {
+// 	names := []string{"Rapip", "Rizal"}
+
+// 	function.PrintMessage("Hello", names)
+// 	function.MathRandom()
+// 	function.Divide()
+// 	function.Lingkaran()
+// 	function.Circle2()
+// 	function.DataDiri()
+// 	function.Avg()
+// 	function.Sum()
+// 	function.Hi()
+// 	function.FilteredName()
+// 	function.Register()
+// 	function.FaktorialLoop(5)
+// 	fmt.Println(function.FaktorialRecursive(5))
+// 	fmt.Println(function.Fib(6))
+// 	function.GetMinMax()
+// 	function.Closure()
+// 	function.IIFE()
+// 	function.RunApp()
+// 	function.Err(true)
+// 	function.Recover2()
+// 	function.New()
+// 	function.Min()
+// }
 
 // func Map() {
 // 	array.Map()
