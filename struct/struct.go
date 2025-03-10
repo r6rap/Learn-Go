@@ -28,4 +28,3 @@ func Struct() {
 	fmt.Println("Name:", ps.name) //cetak nilai field name
 	fmt.Println("Age:", ps.age)
 }
-

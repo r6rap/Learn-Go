@@ -28,7 +28,7 @@ func Embedded() {
 	peope.people.age = 19 // age from struct people
 
 	fmt.Println("Nama:", peope.name)
-	fmt.Println("umur work:", peope.age) // 0 karena field age dari struct work di shadowing oleh field age dari struct people
+	fmt.Println("umur work:", peope.age)
 	fmt.Println("Salary:", peope.salary)
 	fmt.Println("Umur people:", peope.people.age) // untuk mengaksesnya dengan cara menuliskan nama structnya lalu dilanjut fieldnya
 }

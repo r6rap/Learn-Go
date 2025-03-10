@@ -1,21 +1,25 @@
 package main
 
 import(
-	"learn-go/struct"
+	//"learn-go/struct"
+	//"learn-go/method"
 	//"learn-go/pointer"
 	// "learn-go/function"
 	//"fmt"
 	//	"learn-go/array"
-	//  "learn-go/latihan-soal"
+	  "learn-go/latihan-soal"
 	//  "learn-go/chapter-1"
 )
 
-func main() {
-	structs.Struct()
-	structs.StructPointer()
-	structs.Embedded()
-	structs.AnonymousStruct()
-}
+
+// func main() {
+// 	structs.Struct()
+// 	structs.StructPointer()
+// 	structs.Embedded()
+// 	structs.AnonymousStruct()
+// 	structs.SliceStruct()
+// 	method.Method()
+// }
 
 // func pointer() {
 // 	pointer.Pointer()
@@ -111,17 +115,18 @@ func main() {
 // 	chapter1.LabelInGo()
 // }
 
-//func task() {
+func main() {
 // 	latihansoal.FirstTask()
 // 	latihansoal.SecTask()
 // 	latihansoal.ThirdTask()
 //	latihansoal.FourthTask()
-	//latihansoal.TaskOne()
-	//latihansoal.TaskTwo()
-	//latihansoal.TaskThree()
-	//latihansoal.TaskFour()
-	// latihansoal.CopyTask1()
-	// latihansoal.CopyTask2()
-	// latihansoal.CopyTask3()
-	// latihansoal.CopyTask4()
-//}
+//	latihansoal.TaskOne()
+//	latihansoal.TaskTwo()
+//	latihansoal.TaskThree()
+//	latihansoal.TaskFour()
+//	latihansoal.CopyTask1()
+//	latihansoal.CopyTask2()
+//	latihansoal.CopyTask3()
+//	latihansoal.CopyTask4()
+	latihansoal.Testing()
+}
