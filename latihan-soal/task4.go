@@ -9,7 +9,7 @@ type BankAccount struct{
 	Balance float64
 }
 
-	  //menggunakan pointer agar dinamis
+	//menggunakan method pointer agar dinamis
 func (b *BankAccount) deposit(amount float64) error {
 	if amount <= 10000{
 		return fmt.Errorf("Deposit minimal 10.000")
@@ -48,8 +48,11 @@ func (k *BankAccount) transfer(target *BankAccount, amount float64) error {
 		return fmt.Errorf("Jumlah minimal transfer adalah 10.000")
 	}
 
-	k.withdraw(amount) //ambil / wd uang dari balance kita
-	dp := target.deposit(amount) // balance dari target ditambah dengan amount
+	if err := k.withdraw(amount); err != nil {
+		return err
+	} //ambil / wd uang dari balance kita sebanyak amount
+	
+	dp := target.deposit(amount) // balance dari target ditambah dengan amount yang sudah kita wd dari balance kita
 	if dp == nil{
 		fmt.Println("Berhasil transfer ke", target.AccountNumber, "sebesar", amount)
 		fmt.Printf("Saldo target %.2f\n", target.Balance)
@@ -59,21 +62,41 @@ func (k *BankAccount) transfer(target *BankAccount, amount float64) error {
 	return nil
 }
 
-func Testing() {
-	B1 := &BankAccount{AccountNumber: "6784653", HolderName: "Rap", Balance: 1000000}
-	B2 := &BankAccount{AccountNumber: "6758943", HolderName: "Pip", Balance: 500000}
+	//menggunakan method value karena hanya menghitung bunga berdasarkan saldo dari instance
+func (b BankAccount) sukuBunga() (error, float64) {
+	if b.Balance <= 10000 {
+		return fmt.Errorf("saldo harus di atas 10.000"), 0
+	}
 
-	err := B1.transfer(B2, 50000)
+	bunga := b.Balance * 0.04
+
+	return nil,bunga
+}
+
+	//menggunakan method value karena hanya menampilkan info akun berdasarkan instance
+func (b BankAccount) display() (string, string, float64) {
+	return b.AccountNumber, b.HolderName, b.Balance //mengembalikan sesuai dengan instancenya
+}
+
+func Testing() {
+	B1 := BankAccount{AccountNumber: "6784653", HolderName: "Rap", Balance: 1000000}
+	B2 := BankAccount{AccountNumber: "6758943", HolderName: "Pip", Balance: 500000}
+
+
+	err := B1.transfer(&B2, 50000)
 	if err != nil{
 		fmt.Println(err)
 	}
-	// err := B1.withdraw(200000)
-	// if err != nil{
-	// 	fmt.Println(err)
-	// }
 
-	// err = B1.deposit(100000)
-	// if err != nil{
-	// 	fmt.Println(err)
-	// }
+	err, hsl := B2.sukuBunga()
+	if err != nil{
+		fmt.Println(err)
+	} else {
+		fmt.Println("Bunga pertahun adalah", hsl)
+	}
+
+	accNum, name, balance := B1.display()
+	fmt.Println("No rekening:", accNum)
+	fmt.Println("Nama rekening:", name)
+	fmt.Println("Saldo rekening:", balance)
 }
