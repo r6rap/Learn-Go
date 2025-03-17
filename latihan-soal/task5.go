@@ -7,7 +7,7 @@ import (
 )
 
 type wallet struct{
-	Number int
+	Number int64
 	HolderName string
 	Balance float64
 	Transactions []string
@@ -17,7 +17,7 @@ type payment struct{
 	pay float64
 }
 
-func (w *wallet) register(no int, name string) (*wallet, error) {
+func (w *wallet) register(no int64, name string) (*wallet, error) {
 	if w.Number != 0{
 		return w, fmt.Errorf("no sudah terdaftar")
 	}
