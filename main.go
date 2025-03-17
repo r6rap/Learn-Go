@@ -128,5 +128,6 @@ func main() {
 //	latihansoal.CopyTask2()
 //	latihansoal.CopyTask3()
 //	latihansoal.CopyTask4()
-	latihansoal.Testing()
+//	latihansoal.Testing()
+	latihansoal.P_Wallet()
 }

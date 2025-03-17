@@ -13,13 +13,14 @@ type student struct{
 }
 
 func StructPointer() {
-	s1 := student{"Rap", 4}
+	s1 := student{"Rap", 8}
 	// s2 adalah variabel pointer hasil dari student
 	var s2 *student = &s1 // s2 menampung nilai referensi/alamat dari s1
 	// sehingga setiap perubahan pada property variabel s2 juga akan berpengaruh ke variabel s1
 
 	fmt.Println("S1 :", s1.name)
 	fmt.Println("S2 :", s2.name)
+	fmt.Println(s1.grade)
 
 	s2.name = "Bert"
 

@@ -7,7 +7,7 @@ func CopyTask1() {
 	nums2 := make([]int, cap(nums))
 	copy(nums2, nums)
 
-	for i, _ := range nums2{
+	for i := range nums2{
 		if i == 2{
 			nums2[i] = 30
 		}

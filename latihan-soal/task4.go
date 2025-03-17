@@ -12,7 +12,7 @@ type BankAccount struct{
 	//menggunakan method pointer agar dinamis
 func (b *BankAccount) deposit(amount float64) error {
 	if amount <= 10000{
-		return fmt.Errorf("Deposit minimal 10.000")
+		return fmt.Errorf("deposit minimal 10.000")
 	}
 
 	fmt.Printf("Saldo awal: %.2f\n", b.Balance)
@@ -25,13 +25,13 @@ func (b *BankAccount) deposit(amount float64) error {
 
 func (b *BankAccount) withdraw(amount float64) error {
 	if amount < 0{
-		err := fmt.Errorf("Jumlah withdraw tidak valid")
+		err := fmt.Errorf("jumlah withdraw tidak valid")
 		fmt.Println(err)
 		return err
 	}
 
 	if b.Balance < amount{
-		err := fmt.Errorf("Saldo tidak cukup untuk melakukan withdraw")
+		err := fmt.Errorf("saldo tidak cukup untuk melakukan withdraw")
 		fmt.Println("Error", err)
 		return err
 	}
@@ -45,7 +45,7 @@ func (b *BankAccount) withdraw(amount float64) error {
 
 func (k *BankAccount) transfer(target *BankAccount, amount float64) error {
 	if amount < 10000{
-		return fmt.Errorf("Jumlah minimal transfer adalah 10.000")
+		return fmt.Errorf("jumlah minimal transfer adalah 10.000")
 	}
 
 	if err := k.withdraw(amount); err != nil {
