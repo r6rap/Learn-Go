@@ -38,48 +38,72 @@ func (t *wallet) topup(amount float64) error {
 
 	t.Balance += amount
 
+	t.Transactions = append(t.Transactions, fmt.Sprintf("Topup sebesar: +%.2f", amount))
+
 	return nil
 }
 
-func (p *wallet) payment(amount float64) error {
-	if p.Balance <= amount {
+func (p *wallet) payment(company string, amount float64) error {
+	if p.Balance < amount {
 		return fmt.Errorf("tidak bisa membayar, saldo tidak cukup")
 	}
 	p.Balance -= amount
+
+	p.Transactions =  append(p.Transactions, fmt.Sprintf("Pembayaran %s sebesar: -%.2f", company, amount))
 
 	return nil
 }
 
 func (tf *wallet) transfer(target *wallet, amount float64) error {
-	if tf.Balance <= 0 {
-		return fmt.Errorf("saldo di bawah Rp 0")
+	if tf.Number == target.Number {
+		return fmt.Errorf("tidak bisa transfer ke nomor sendiri")
 	}
-	if tf.Balance < amount {
+	if amount > tf.Balance {
 		return fmt.Errorf("saldo tidak cukup untuk melakukan transfer")
 	}
 
 	tf.Balance -= amount
-	target.topup(amount)
+	tf.Transactions = append(tf.Transactions, fmt.Sprintf("Transfer ke %s -%.2f", target.HolderName, amount))
+
+	target.Balance += amount
+	target.Transactions = append(target.Transactions, fmt.Sprintf("Transfer dari %s +%.2f", tf.HolderName, amount))
 
 	return nil
 }
 
-func (b wallet) monthlyInterest() (error, float64) {
+func (b *wallet) monthlyInterest() (float64, error) {
 	if b.Balance < 1000000 {
-		return fmt.Errorf("saldo anda di bawah Rp 1.000.000, tidak bisa mendaoatkan bunga perbulan"), 0
+		return 0, fmt.Errorf("saldo anda di bawah Rp 1.000.000, tidak bisa mendaoatkan bunga perbulan")
 	}
 
 	monthlyInterest := b.Balance * 0.02
 
 	b.Balance += monthlyInterest
 
-	return nil, monthlyInterest
+	b.Transactions = append(b.Transactions, fmt.Sprintf("Bunga bulanan Rp %.2f", monthlyInterest))
+
+	return monthlyInterest, nil
 }
 
 func (info wallet) information() {
 	fmt.Println("Nomor akun", info.Number)
 	fmt.Println("Username akun", info.HolderName)
 	fmt.Printf("Saldo: %.2f\n", info.Balance)
+}
+
+func (h *wallet) historyTransaction() error {
+	if len(h.Transactions) == 0 {
+		return fmt.Errorf("tidak ada transaksi")
+	}
+
+	fmt.Println("Riwayat Transaksi:")
+	for i, v := range h.Transactions {
+		fmt.Println(i+1, v)
+	}
+
+	fmt.Printf("Saldo sekarang: Rp %.2f", h.Balance)
+
+	return nil
 }
 
 func P_Wallet() {
@@ -125,18 +149,22 @@ func P_Wallet() {
 
 	Data1.topup(100000)
 
-	if err := Data1.payment(netflix.pay); err != nil {
+	if err := Data1.payment(netflix.company, netflix.pay); err != nil {
 		fmt.Println(err)
 	} else {
 		fmt.Println("Berhasil membayar")
 		fmt.Printf("Saldo sekarang: %.2f\n", Data1.Balance)
 	}
 
-	err, bunga := Data1.monthlyInterest()
+	bunga, err := Data1.monthlyInterest()
 
 	if err != nil {
 		fmt.Println(err)
 	} else {
 		fmt.Printf("Bunga anda setiap bulan: %.2f\n", bunga)
+	}
+
+	if err := Data1.historyTransaction(); err != nil {
+		fmt.Println(err)
 	}
 }

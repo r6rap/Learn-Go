@@ -63,14 +63,14 @@ func (k *BankAccount) transfer(target *BankAccount, amount float64) error {
 }
 
 	//menggunakan method value karena hanya menghitung bunga berdasarkan saldo dari instance
-func (b BankAccount) sukuBunga() (error, float64) {
+func (b BankAccount) sukuBunga() (float64, error) {
 	if b.Balance <= 10000 {
-		return fmt.Errorf("saldo harus di atas 10.000"), 0
+		return 0, fmt.Errorf("saldo harus di atas 10.000")
 	}
 
 	bunga := b.Balance * 0.04
 
-	return nil,bunga
+	return bunga, nil
 }
 
 	//menggunakan method value karena hanya menampilkan info akun berdasarkan instance
@@ -88,7 +88,7 @@ func Testing() {
 		fmt.Println(err)
 	}
 
-	err, hsl := B2.sukuBunga()
+	hsl, err := B2.sukuBunga()
 	if err != nil{
 		fmt.Println(err)
 	} else {
