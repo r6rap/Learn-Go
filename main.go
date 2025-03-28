@@ -5,12 +5,17 @@ import(
 	//"learn-go/method"
 	//"learn-go/pointer"
 	// "learn-go/function"
-	//"fmt"
+	// "fmt"
 	//	"learn-go/array"
-	  "learn-go/latihan-soal"
+	//  "learn-go/latihan-soal"
 	//  "learn-go/chapter-1"
+	"learn-go/interface"
 )
 
+
+func main() {
+	interfaces.Interface()
+}
 
 // func main() {
 // 	structs.Struct()
@@ -115,7 +120,7 @@ import(
 // 	chapter1.LabelInGo()
 // }
 
-func main() {
+// func task() {
 // 	latihansoal.FirstTask()
 // 	latihansoal.SecTask()
 // 	latihansoal.ThirdTask()
@@ -129,5 +134,5 @@ func main() {
 //	latihansoal.CopyTask3()
 //	latihansoal.CopyTask4()
 //	latihansoal.Testing()
-	latihansoal.P_Wallet()
-}
+//	latihansoal.P_Wallet()
+// }

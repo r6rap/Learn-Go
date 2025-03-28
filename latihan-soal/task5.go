@@ -17,6 +17,7 @@ type payment struct{
 	pay float64
 }
 
+// function ga perfect
 func (w *wallet) register(no int64, name string) (*wallet, error) {
 	if w.Number != 0{
 		return w, fmt.Errorf("no sudah terdaftar")
