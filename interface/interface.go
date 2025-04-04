@@ -71,6 +71,4 @@ func Interface() {
 
  // method diameter() tidak ada dalam interface hitung, jadi harus dikonversi ke tipe lingkaran
 	fmt.Printf("Diameter lingkaran dengan jari-jari 14: %.2f\n", bangunDatar.(lingkaran).diameter())
-
-	Rafifrizal7@
 }

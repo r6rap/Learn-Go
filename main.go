@@ -15,6 +15,7 @@ import(
 
 func main() {
 	interfaces.Interface()
+	interfaces.EmbeddedInterface()
 }
 
 // func main() {
