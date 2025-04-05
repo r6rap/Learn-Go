@@ -16,6 +16,7 @@ import(
 func main() {
 	interfaces.Interface()
 	interfaces.EmbeddedInterface()
+	interfaces.Kantin()
 }
 
 // func main() {
