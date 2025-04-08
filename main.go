@@ -1,6 +1,6 @@
 package main
 
-import(
+import (
 	//"learn-go/struct"
 	//"learn-go/method"
 	//"learn-go/pointer"
@@ -9,15 +9,33 @@ import(
 	//	"learn-go/array"
 	//  "learn-go/latihan-soal"
 	//  "learn-go/chapter-1"
-	"learn-go/interface"
+	//	"learn-go/interface"
+	//	"learn-go/reflect"
+	//	"learn-go/goroutine"
+	"learn-go/channel"
 )
 
-
 func main() {
-	interfaces.Interface()
-	interfaces.EmbeddedInterface()
-	interfaces.Kantin()
+	// channel.Channel()
+	// channel.Buffered()
+	channel.ChSelect()
 }
+
+// func goroutine() {
+// 	goroutine.Goroutines()
+// }
+
+// func reflect() {
+// 	reflects.Reflect()
+// 	reflects.Change()
+// 	reflects.Reflects()
+// }
+
+// func interface() {
+// 	interfaces.Interface()
+// 	interfaces.EmbeddedInterface()
+// 	interfaces.Kantin()
+// }
 
 // func main() {
 // 	structs.Struct()

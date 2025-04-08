@@ -11,7 +11,7 @@ import "strings"
 type Filter func(string) string //Filter adalah alias dari func(string) string
 
 		//atau bisa langsung fliter Filter
-func nameFilter (name string, filter func(string) string) string  {
+func nameFilter (name string, filter Filter) string  {
 	return "Hello " + filter(name) //filter(name) sama seperti filterName(name)
 	//sebelum menampilkan return kita filter dulu di func filterName
 }
@@ -52,7 +52,7 @@ func Min() {
 
 	var dataContainsO = filter(data, func(yo string) bool { //yo berisi string dari slice data
 		//proses filter yang akan menghasilkan true ataupun false
-		return strings.Contains(yo, "o") //Contains untuk mengecek apakah substring(param2) bagian dari string(param1)
+		return strings.Contains(yo, "o") //Contains untuk mengecek apakah substring(parameter 2) bagian dari string(parameter 1)
 	})
 
 	var dataLenght5 = filter(data, func(yo string) bool {
