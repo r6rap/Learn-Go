@@ -5,7 +5,8 @@ import "fmt"
 /*	Channel adalah media perantara / jalur komunikasi antara goroutine yang di mana goroutine a bisa mengirim data dan goroutine lain
 	bisa menerima data dari channel tersebut. secara default channel dijalankan secara synchronous.
 	jika tanda <- ditulis di sebelah kiri variabel, berarti sedang berlangsung pengiriman data.
-	jika tanda <- ditulis di sebelah kiri channel, berarti sedang berlangsung penerimaan data */
+	jika tanda <- ditulis di sebelah kiri channel, berarti sedang berlangsung penerimaan data
+	jika hanya "ch chan string" maka channel tersebut bisa mengirim sekaligus menerima data */
 
 func Channel() {
 	var messages = make(chan string) // membuat channel dengan tipe data string

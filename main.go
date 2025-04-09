@@ -19,6 +19,8 @@ func main() {
 	// channel.Channel()
 	// channel.Buffered()
 	channel.ChSelect()
+	// channel.CH()
+	channel.TimeoutCH()
 }
 
 // func goroutine() {
