@@ -7,7 +7,7 @@ import (
 	// "learn-go/function"
 	// "fmt"
 	//	"learn-go/array"
-	//  "learn-go/latihan-soal"
+	  "learn-go/latihan-soal"
 	//  "learn-go/chapter-1"
 	//	"learn-go/interface"
 	//	"learn-go/reflect"
@@ -21,6 +21,7 @@ func main() {
 	channel.ChSelect()
 	// channel.CH()
 	channel.TimeoutCH()
+	latihansoal.TestSimple()
 }
 
 // func goroutine() {
