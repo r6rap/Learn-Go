@@ -7,22 +7,23 @@ import (
 	// "learn-go/function"
 	// "fmt"
 	//	"learn-go/array"
-	  "learn-go/latihan-soal"
+	//  "learn-go/latihan-soal"
 	//  "learn-go/chapter-1"
 	//	"learn-go/interface"
 	//	"learn-go/reflect"
 	//	"learn-go/goroutine"
-	"learn-go/channel"
+	//	"learn-go/channel"
+	//
 )
 
-func main() {
+//func channel() {
 	// channel.Channel()
 	// channel.Buffered()
-	channel.ChSelect()
+	// channel.ChSelect()
 	// channel.CH()
-	channel.TimeoutCH()
-	latihansoal.TestSimple()
-}
+	// channel.TimeoutCH()
+	// latihansoal.TestSimple()
+//}
 
 // func goroutine() {
 // 	goroutine.Goroutines()
